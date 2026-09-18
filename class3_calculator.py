@@ -11,7 +11,6 @@ def main():
     parser = argparse.ArgumentParser(description="A simple calculator")
     parser.add_argument("--a", "-a", type=float, required=True, help="First number")
     parser.add_argument("--b", "-b", type=float, required=True, help="Second number")
-    parser.add_argument(
         parser.add_argument(
         "--operation", "-op",
         choices=["add", "subtract", "multiply"],
