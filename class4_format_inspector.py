@@ -15,7 +15,6 @@ logger = logging.getLogger(__name__)
 
 
 def inspect_csv(filepath):
-    """Read a CSV file and display basic information."""
     df = pd.read_csv(filepath)
     logger.info(f"Inspecting CSV file: {filepath}")
     print(df.head(3))  # Print the first three rows
@@ -24,7 +23,6 @@ def inspect_csv(filepath):
 
 
 def inspect_json(filepath):
-    """Read a JSON file and display basic information."""
     with open(filepath, "r") as f:
         dj = json.load(f)
     logger.info(f"Inspecting JSON file: {filepath}")
@@ -33,7 +31,6 @@ def inspect_json(filepath):
 
 
 def inspect_yaml(filepath):
-    """Read a YAML file and display basic information."""
     with open(filepath, "r") as f:
         dy = yaml.safe_load(f)
     logger.info(f"Inspecting YAML file: {filepath}")
@@ -42,7 +39,6 @@ def inspect_yaml(filepath):
 
 
 def inspect_env():
-    """Read a .env file and display basic information."""
     load_dotenv()
 
     keys = [
